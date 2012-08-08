@@ -7,7 +7,7 @@ using Shouldly;
 // ReSharper disable InconsistentNaming
 
 
-namespace FluencyKoans.Tests
+namespace FluencyKoans.Koans
 {
 	/// <summary>
 	/// Fill in the blank ( __ ) in each test with the code that will make the assertions pass.
