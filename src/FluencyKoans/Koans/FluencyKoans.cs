@@ -27,7 +27,7 @@ namespace FluencyKoans.Koans
 			 */
 
 
-			customer =__;
+			customer = __;
 
 
 			// Assert.
@@ -222,7 +222,7 @@ namespace FluencyKoans.Koans
 			#region Extra Credit
 
 			/*
-			 * Ensure that th customer is 18 or older.
+			 * Ensure that the customer is 18 years or older.
 			 */
 
 			#endregion Extra Credit
