@@ -1,4 +1,6 @@
 ﻿using System;
+using Fluency;
+using Fluency.DataGeneration;
 using FluencyKoans.Models;
 using FluencyKoans.Utils;
 using NUnit.Framework;
@@ -21,10 +23,11 @@ namespace FluencyKoans.Tests
 		{
 			/*
 			 * Use Fluency's DynamicFluentBuilder<> class to build a Customer object.
+			 * Don't forget to call build() to create the customer.
 			 */
 
 
-			customer = __;
+			customer =__;
 
 
 			// Assert.
@@ -133,7 +136,6 @@ namespace FluencyKoans.Tests
 
 			// Assert.
 			order.Print();
-			order.Customer.ShouldNotBe( null );
 			order.LineItems.ShouldNotBe( null );
 			order.LineItems.Count.ShouldBe( 2 );
 			order.LineItems[0].Description.ShouldNotBeEmpty();
@@ -150,8 +152,10 @@ namespace FluencyKoans.Tests
 			#region Hint
 
 			/*
-			 * Create a new class that extends DynamicFluentBuilder<Customer>.
+			 * Create a new class that extends DynamicFluentBuilder<Order>.
 			 * Set the default values in the constructor of the class.
+			 *  - Use SetProperty() to populate the customer
+			 *  - Use AddToList() to populate the line items.
 			 */
 
 			#endregion Hint
@@ -179,8 +183,8 @@ namespace FluencyKoans.Tests
 			#region Hint
 
 			/*
-			 * Iterate through line items and set thier order property.
-			 * Put this code in builder.AfterBuild() to ensure it runs after each object is build.
+			 * Override builder.AfterBuilding() method and in it 
+			 * iterate through the order's line items and set thier Order property.
 			 */
 
 			#endregion Hint
@@ -208,7 +212,9 @@ namespace FluencyKoans.Tests
 
 			/*
 			 * Create a CustomerBuilder and set these values in its constructor.
-			 * Use GetValue( x => x.BirthDate) to retrieve the birthdate so you can generate a later CustomerSinceDate.
+			 * Use methods on the ARandom class like ARandom.BirthDate() and ARandom.DateInPastSince( date ) to generate random values.
+			 * USe GetValue to retrieve property values you have already set.
+			 *  i.e. use GetValue( x => x.BirthDate) to retrieve the birthdate so you can generate a later CustomerSinceDate.
 			 */
 
 			#endregion Hint
@@ -216,14 +222,15 @@ namespace FluencyKoans.Tests
 			#region Extra Credit
 
 			/*
-			 * Ensure that customers must be 18 or older.
+			 * Ensure that th customer is 18 or older.
 			 */
 
 			#endregion Extra Credit
 			#region Extra Credit Hint
 
 			/*
-			 * Generate an age >18 and reverse engineer a birthdate from that.
+			 * Generate an age >18 and using ARandom.IntBetween().
+			 * Reverse engineer a birthdate from the age using ARandom.BithDateForAge().
 			 * Generate a CustSinceDate that is after their 18th birthday.
 			 */
 
@@ -239,6 +246,7 @@ namespace FluencyKoans.Tests
 			customer.CustomerSinceDate.ShouldBeLessThan( DateTime.Now );
 			customer.CustomerSinceDate.ShouldBeGreaterThan( customer.BirthDate );
 			// Extra Credit. (uncomment the following line to test it)
+			// customer.BirthDate.ShouldBeLessThan( DateTime.Now.AddYears( -18 ) );
 			// customer.CustomerSinceDate.ShouldBeGreaterThan( customer.BirthDate.AddYears( 18 ) );
 		}
 
@@ -253,6 +261,7 @@ namespace FluencyKoans.Tests
 
 			/*
 			 * Create CustomerBuilder.WhoIsAMinor() method to generate the birthdate for someone under 21.
+			 * Don't forget to call that method before buiding.
 			 */
 
 			#endregion Hint
