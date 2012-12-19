@@ -59,7 +59,7 @@
     <Compile Include="Models\LineItem.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\FluencyKoans.cs" />
+    <Compile Include="Koans\FluencyKoans.cs" />
     <Compile Include="Utils\PrintExtension.cs" />
   </ItemGroup>
   <ItemGroup>
