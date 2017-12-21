@@ -31,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fluency">
-      <HintPath>..\packages\Fluency.1.0.38\lib\net40\Fluency.dll</HintPath>
+    <Reference Include="Fluency, Version=1.0.59.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fluency.1.0.59\lib\net40\Fluency.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
