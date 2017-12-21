@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluencyKoans", "FluencyKoans\FluencyKoans.csproj", "{79D1D15D-3A99-49A1-BC95-8CCB677D1848}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluencyKoans", "FluencyKoans\FluencyKoans.csproj", "{EF2B3DBD-1FCF-4709-B8EB-9A449FAB734A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{79D1D15D-3A99-49A1-BC95-8CCB677D1848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79D1D15D-3A99-49A1-BC95-8CCB677D1848}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79D1D15D-3A99-49A1-BC95-8CCB677D1848}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79D1D15D-3A99-49A1-BC95-8CCB677D1848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF2B3DBD-1FCF-4709-B8EB-9A449FAB734A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF2B3DBD-1FCF-4709-B8EB-9A449FAB734A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF2B3DBD-1FCF-4709-B8EB-9A449FAB734A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF2B3DBD-1FCF-4709-B8EB-9A449FAB734A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {934BE8C5-BD11-4961-81F8-FAF40BC6D0AA}
 	EndGlobalSection
 EndGlobal
